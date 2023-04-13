@@ -1,7 +1,5 @@
 <template>
   <AmsNavbar />
-  <br>
-  <AmsButton label="CLick Me" />
 </template>
 
 <script>

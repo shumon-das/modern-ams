@@ -1,12 +1,13 @@
 <template>
-  <AmsMenubar :model="items">
-    <template #start>
-      <img alt="logo" src="/images/logo.svg" height="40" class="mr-2"/>
-    </template>
-    <template #end>
-      <InputText placeholder="Search" type="text"/>
-    </template>
-  </AmsMenubar>
+  <div class="grid flex justify-content-end">
+    <div class="col-3">
+      <img alt="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROQ7UCmfAVDlSRQuo8j1rvLEbiFDrsfWEAVh_Ki8NjEWzJMlQW2K2fzuyEW8Ag192MsE8&usqp=CAU" height="40" class="mr-2"/>
+    </div>
+    <div class="col-9">
+      <AmsMenubar :model="items" class="p-menubar-end p-menuitem-active">
+      </AmsMenubar>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -18,7 +19,7 @@ export default defineComponent({
     return {
      items: [
       {
-        label: 'File',
+        label: 'Overview',
         icon: 'pi pi-fw pi-file',
         items: [
           {
@@ -49,7 +50,7 @@ export default defineComponent({
         ]
       },
       {
-        label: 'Edit',
+        label: 'Solutions',
         icon: 'pi pi-fw pi-pencil',
         items: [
           {
@@ -71,7 +72,7 @@ export default defineComponent({
         ]
       },
       {
-        label: 'Users',
+        label: 'Features',
         icon: 'pi pi-fw pi-user',
         items: [
           {
@@ -105,7 +106,7 @@ export default defineComponent({
         ]
       },
       {
-        label: 'Events',
+        label: 'Demo',
         icon: 'pi pi-fw pi-calendar',
         items: [
           {
@@ -135,9 +136,43 @@ export default defineComponent({
         ]
       },
       {
-        label: 'Quit',
+        label: 'Get Quote',
         icon: 'pi pi-fw pi-power-off'
-      }
+      },
+       {
+        label: 'Resource',
+        icon: 'pi pi-fw pi-calendar',
+        items: [
+          {
+            label: 'Edit',
+            icon: 'pi pi-fw pi-pencil',
+            items: [
+              {
+                label: 'Save',
+                icon: 'pi pi-fw pi-calendar-plus'
+              },
+              {
+                label: 'Delete',
+                icon: 'pi pi-fw pi-calendar-minus'
+              }
+            ]
+          },
+          {
+            label: 'Archieve',
+            icon: 'pi pi-fw pi-calendar-times',
+            items: [
+              {
+                label: 'Remove',
+                icon: 'pi pi-fw pi-calendar-minus'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Support',
+        icon: 'pi pi-fw pi-power-off'
+      },
     ]
   }
   }
@@ -145,5 +180,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
+img {
+  width: 100px;
+  margin-left: 50px;
+}
 </style>
