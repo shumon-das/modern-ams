@@ -1,11 +1,12 @@
 <template>
-  <div class="grid flex justify-content-end">
-    <div class="col-3">
+  <div class="grid flex justify-content-end pb-3">
+    <div class="col-3 pb-0">
       <img alt="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROQ7UCmfAVDlSRQuo8j1rvLEbiFDrsfWEAVh_Ki8NjEWzJMlQW2K2fzuyEW8Ag192MsE8&usqp=CAU" height="40" class="mr-2"/>
     </div>
-    <div class="col-9">
+    <div class="col-9 pb-0">
       <AmsMenubar :model="items" class="p-menubar-end p-menuitem-active">
       </AmsMenubar>
+        <AmsButton class="margin_top" label="Login" size="small" rounded />
     </div>
   </div>
 </template>
@@ -184,4 +185,14 @@ img {
   width: 100px;
   margin-left: 50px;
 }
+.margin_top {
+  margin-top: 7px
+}
+.p-menubar {
+  background: transparent;
+  border: none;
+  width: 80%;
+  float: left;
+}
+
 </style>
