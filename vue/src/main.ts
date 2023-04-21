@@ -14,12 +14,15 @@ import "primeicons/primeicons.css";
 
 import Button from "primevue/button";
 import Menubar from 'primevue/menubar';
+import Card from 'primevue/card';
 
 //ams
 import AmsHeader from "@/views/AmsHeader.vue";
 import AmsNavbar from "@/components/headers/AmsNavbar.vue";
 import SectionOne from "@/components/home/SectionOne.vue";
 import SectionTwo from "@/components/home/SectionTwo.vue";
+import SectionThree from "@/components/home/SectionThree.vue";
+import AmsCard from "@/components/micro/AmsCard.vue";
 
 const app = createApp(App)
 
@@ -29,11 +32,14 @@ app.use(PrimeVue);
 
 app.component("AmsButton", Button);
 app.component("AmsMenubar", Menubar);
+app.component("PrimeCard", Card);
 
 //ams
 app.component("AmsHeader", AmsHeader);
 app.component("AmsNavbar", AmsNavbar);
-app.component("SectionOne", SectionOne)
-app.component("SectionTwo", SectionTwo)
+app.component("SectionOne", SectionOne);
+app.component("SectionTwo", SectionTwo);
+app.component("SectionThree", SectionThree);
+app.component("AmsCard", AmsCard);
 
 app.mount('#app')

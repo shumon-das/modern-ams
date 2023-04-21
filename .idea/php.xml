@@ -42,6 +42,10 @@
       <path value="$PROJECT_DIR$/api/vendor/symfony/service-contracts" />
       <path value="$PROJECT_DIR$/api/vendor/symfony/runtime" />
       <path value="$PROJECT_DIR$/api/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/api/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/api/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/api/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/api/vendor/nelmio/cors-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

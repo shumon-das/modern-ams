@@ -1,13 +1,13 @@
 <template>
   <div class="grid section-one">
-      <div class="img">
-        <img src="@/assets/images/section-one-handshake.jpg" alt="" class="back-img">
+      <div class="sec-one-img">
+        <img src="@/assets/images/section-one-handshake.jpg" alt="background" class="back-img">
       </div>
 
     <div class="col-1"></div>
     <div class="col-5 sec-one-one mt-6">
       <div class="service-message">
-        <h3 class="section-one-message text-7xl">Unified asset management service for your company</h3>
+        <h3 class="section-one-message text-7xl">Unified asset management service <br> for your company</h3>
         <h2 class="section-one-message">Design, automate, deliver, and manage critical IT and business services</h2>
         <AmsButton class=" block m-auto" label="TRY FOR A FREE DEMO" severity="help" raised  />
       </div>
@@ -29,7 +29,7 @@ export default defineComponent({
 
 <style>
 
-.img {
+.sec-one-img {
   width: 100%;
   height: 92vh;
   position: absolute;
@@ -37,7 +37,10 @@ export default defineComponent({
 }
 .back-img {
   width: 100%;
-  height: 92vh;
+  height: 86vh;
+}
+.section-one {
+  height: 86vh;
 }
 .sec-one-one {
   position: relative;
