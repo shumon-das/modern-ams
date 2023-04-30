@@ -15,6 +15,10 @@ import "primeicons/primeicons.css";
 import Button from "primevue/button";
 import Menubar from 'primevue/menubar';
 import Card from 'primevue/card';
+import Steps from 'primevue/steps';
+import Dialog from 'primevue/dialog';
+import InputText from 'primevue/inputtext';
+import Password from 'primevue/password';
 
 //ams
 import AmsHeader from "@/views/AmsHeader.vue";
@@ -23,6 +27,9 @@ import SectionOne from "@/components/home/SectionOne.vue";
 import SectionTwo from "@/components/home/SectionTwo.vue";
 import SectionThree from "@/components/home/SectionThree.vue";
 import AmsCard from "@/components/micro/AmsCard.vue";
+import LogIn from "@/components/LogIn.vue";
+import AmsSteps from "@/components/micro/AmsSteps.vue";
+import AmsModal from "@/components/micro/AmsModal.vue";
 
 const app = createApp(App)
 
@@ -33,6 +40,10 @@ app.use(PrimeVue);
 app.component("AmsButton", Button);
 app.component("AmsMenubar", Menubar);
 app.component("PrimeCard", Card);
+app.component("PrimeSteps", Steps);
+app.component("PModal", Dialog);
+app.component("InputText", InputText);
+app.component("PPassword", Password);
 
 //ams
 app.component("AmsHeader", AmsHeader);
@@ -41,5 +52,8 @@ app.component("SectionOne", SectionOne);
 app.component("SectionTwo", SectionTwo);
 app.component("SectionThree", SectionThree);
 app.component("AmsCard", AmsCard);
+app.component("AmsSteps",AmsSteps);
+app.component("LogIn", LogIn);
+app.component("AmsModal", AmsModal);
 
 app.mount('#app')
