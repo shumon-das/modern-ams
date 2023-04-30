@@ -6,9 +6,14 @@
     <div class="col-9 pb-0">
       <AmsMenubar :model="items" class="p-menubar-end p-menuitem-active">
       </AmsMenubar>
-        <AmsButton class="margin_top" label="Login" size="small" rounded />
+        <AmsButton class="margin_top" label="Login" size="small" rounded @click="this.display = true" />
     </div>
   </div>
+
+    <LogIn
+        :display="this.display"
+        @modal-response="getModalResponse($event)"
+    />
 </template>
 
 <script lang="ts">
@@ -18,6 +23,7 @@ export default defineComponent({
   name: "AmsNavbar",
   data() {
     return {
+      display: false,
      items: [
       {
         label: 'Overview',
@@ -176,6 +182,11 @@ export default defineComponent({
       },
     ]
   }
+  },
+  methods: {
+    getModalResponse(evt: boolean) {
+      this.display = evt;
+    }
   }
 });
 </script>

@@ -30,6 +30,7 @@ import AmsCard from "@/components/micro/AmsCard.vue";
 import LogIn from "@/components/LogIn.vue";
 import AmsSteps from "@/components/micro/AmsSteps.vue";
 import AmsModal from "@/components/micro/AmsModal.vue";
+import ValidationMessage from "@/components/micro/ValidationMessage.vue";
 
 const app = createApp(App)
 
@@ -55,5 +56,6 @@ app.component("AmsCard", AmsCard);
 app.component("AmsSteps",AmsSteps);
 app.component("LogIn", LogIn);
 app.component("AmsModal", AmsModal);
+app.component("ValidationMessage", ValidationMessage);
 
 app.mount('#app')
