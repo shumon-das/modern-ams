@@ -18,7 +18,7 @@
 <!--      <span v-if="v$.password.$error">{{ v$.password.$errors[0].$message }}</span>-->
       <ValidationMessage :errors="v$.password.$errors" />
       <template #footer>
-        <AmsButton label="Close" icon="pi pi-times" @click="response(false)"/>
+        <AmsButton label="Close" icon="pi pi-times" text raised @click="response(false)"/>
         <AmsButton label="SignIn" icon="pi pi-check" @click="login()" autofocus />
       </template>
     </PModal>
