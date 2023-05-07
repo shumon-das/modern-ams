@@ -1,5 +1,5 @@
 <template>
-  <PrimeCard>
+  <PCard>
       <template #header>
         <i :class="this.icon"></i>
       </template>
@@ -7,7 +7,7 @@
       <template #content>
           <p> {{config.content}} </p>
       </template>
-  </PrimeCard>
+  </PCard>
 </template>
 
 <script lang="ts">

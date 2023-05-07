@@ -1,12 +1,14 @@
 <template>
   <div class="card flex justify-content-center">
     <PModal v-model:visible="this.visible" header="Sign In" p-dialog-titlebar-close="true"	:style="{ width: '25vw' }">
-        <span class="p-float-label my-5">
-            <InputText class="w-full" id="username" v-model="this.email" />
-            <label for="username">Username</label>
+        <span class="p-float-label mt-5">
+            <InputText class="w-full" id="email" v-model="this.email" />
+            <label for="email">Email</label>
         </span>
-      <span class="p-float-label my-5">
+      <ValidationMessage :errors="v$.email.$errors" />
+      <span class="p-float-label mt-5">
           <PPassword
+              :feedback="false"
               class="w-full"
               :class="{ 'p-invalid': v$.password.$error }"
               v-model="this.password"
@@ -15,7 +17,6 @@
           />
           <label for="password">Password</label>
       </span>
-<!--      <span v-if="v$.password.$error">{{ v$.password.$errors[0].$message }}</span>-->
       <ValidationMessage :errors="v$.password.$errors" />
       <template #footer>
         <AmsButton label="Close" icon="pi pi-times" text raised @click="response(false)"/>
@@ -46,8 +47,8 @@ export default defineComponent({
   },
   validations() {
     return {
-      email: { required },
-      password: { required, email, minLength: minLength(6) }
+      email: { required, email },
+      password: { required, minLength: minLength(6) }
     }
   },
   methods: {

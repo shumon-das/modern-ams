@@ -4,6 +4,7 @@ import AmsSteps from "@/components/micro/AmsSteps.vue";
 import LogIn from "@/components/LogIn.vue";
 import AmsModal from "@/components/micro/AmsModal.vue";
 import AmsSelect from "@/components/micro/AmsSelect.vue";
+import AmsTable from "@/components/micro/AmsTable.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,11 +29,11 @@ const router = createRouter({
       name: 'modal',
       component: AmsModal
     },
-    // {
-    //   path: '/select',
-    //   name: 'select',
-    //   component: AmsSelect
-    // },
+    {
+      path: '/table',
+      name: 'table',
+      component: AmsTable
+    },
     {
       path: '/about',
       name: 'about',
