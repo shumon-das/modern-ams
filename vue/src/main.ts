@@ -24,6 +24,8 @@ import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import ColumnGroup from 'primevue/columngroup';   // optional
 import Row from 'primevue/row';                   // optional
+import Tag from 'primevue/tag';
+import MultiSelect from 'primevue/multiselect';
 
 //ams
 import AmsHeader from "@/views/AmsHeader.vue";
@@ -57,6 +59,8 @@ app.component("DataTable", DataTable);
 app.component("Column", Column);
 app.component("ColumnGroup", ColumnGroup);
 app.component("Row", Row);
+app.component("Tag", Tag);
+app.component("MultiSelect", MultiSelect);
 
 //ams
 app.component("AmsHeader", AmsHeader);

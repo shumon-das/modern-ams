@@ -4,3 +4,10 @@ export interface ProductTableInterface {
     category: string;
     quantity: number;
 }
+
+export interface CustomerTableInterface {
+    name: string;
+    country: { name: string };
+    representative: { name: string };
+    status: string;
+}
