@@ -5,6 +5,8 @@ import LogIn from "@/components/LogIn.vue";
 import AmsModal from "@/components/micro/AmsModal.vue";
 import AmsSelect from "@/components/micro/AmsSelect.vue";
 import AmsTable from "@/components/micro/AmsTable.vue";
+import DynamicTable from "@/components/micro/DynamicTable.vue";
+import AmsCustomers from "@/views/AmsCustomers.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +35,16 @@ const router = createRouter({
       path: '/table',
       name: 'table',
       component: AmsTable
+    },
+    {
+      path: '/dynamic-table',
+      name: 'dynamic-table',
+      component: DynamicTable,
+    },
+    {
+      path: '/customers',
+      name: 'customers',
+      component: AmsCustomers,
     },
     {
       path: '/about',
