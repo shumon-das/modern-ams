@@ -42,6 +42,7 @@ import AmsSelect from "@/components/micro/AmsSelect.vue";
 import AmsTable from "@/components/micro/AmsTable.vue";
 import DynamicTable from "@/components/micro/DynamicTable.vue";
 import AmsCustomers from "@/views/AmsCustomers.vue";
+import AmsCustomSwitch from "@/components/micro/custom/AmsCustomSwitch.vue";
 
 const app = createApp(App)
 
@@ -79,5 +80,8 @@ app.component("AmsSelect", AmsSelect);
 app.component("AmsTable", AmsTable);
 app.component("DynamicTable", DynamicTable);
 app.component("AmsCustomers", AmsCustomers);
+
+// custom
+app.component("AmsCustomSwitch", AmsCustomSwitch);
 
 app.mount('#app')
