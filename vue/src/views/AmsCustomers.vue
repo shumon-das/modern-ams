@@ -1,24 +1,24 @@
 <template>
-<!--<div class="grid">-->
-  <DynamicTable :tableData="customers()" />
-<!--</div>-->
+<div class="grid flex justify-content-center mt-7">
+  <AmsCustomSwitch :value="true" :optionA="'and'" :optionB="'or'" @update="getUpdate($event)"/>
+</div>
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue";
-import DynamicTable from "@/components/micro/DynamicTable.vue";
-import { customers } from "@/stores/static-data";
+import AmsCustomSwitch from "@/components/micro/custom/AmsCustomSwitch.vue";
 
 export default defineComponent({
   name: "AmsCustomers",
+  components: { AmsCustomSwitch },
   methods: {
-    customers() {
-      return customers
+    getUpdate(evt: boolean) {
+      console.log(evt);
     }
   },
-  components: { DynamicTable },
-
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

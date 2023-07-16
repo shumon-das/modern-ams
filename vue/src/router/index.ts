@@ -7,6 +7,7 @@ import AmsSelect from "@/components/micro/AmsSelect.vue";
 import AmsTable from "@/components/micro/AmsTable.vue";
 import DynamicTable from "@/components/micro/DynamicTable.vue";
 import AmsCustomers from "@/views/AmsCustomers.vue";
+import AmsCharts from "@/components/micro/custom/AmsCharts.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,6 +46,16 @@ const router = createRouter({
       path: '/customers',
       name: 'customers',
       component: AmsCustomers,
+    },
+    {
+      path: '/custom-components',
+      name: 'custom-components',
+      component: AmsCustomers,
+    },
+    {
+      path: '/charts',
+      name: 'charts',
+      component: AmsCharts,
     },
     {
       path: '/about',

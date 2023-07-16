@@ -26,6 +26,7 @@ import ColumnGroup from 'primevue/columngroup';   // optional
 import Row from 'primevue/row';                   // optional
 import Tag from 'primevue/tag';
 import MultiSelect from 'primevue/multiselect';
+import Chart from 'primevue/chart';
 
 //ams
 import AmsHeader from "@/views/AmsHeader.vue";
@@ -43,6 +44,7 @@ import AmsTable from "@/components/micro/AmsTable.vue";
 import DynamicTable from "@/components/micro/DynamicTable.vue";
 import AmsCustomers from "@/views/AmsCustomers.vue";
 import AmsCustomSwitch from "@/components/micro/custom/AmsCustomSwitch.vue";
+import AmsCharts from "@/components/micro/custom/AmsCharts.vue";
 
 const app = createApp(App)
 
@@ -64,6 +66,7 @@ app.component("ColumnGroup", ColumnGroup);
 app.component("Row", Row);
 app.component("Tag", Tag);
 app.component("MultiSelect", MultiSelect);
+app.component("Chart", Chart);
 
 //ams
 app.component("AmsHeader", AmsHeader);
@@ -80,6 +83,7 @@ app.component("AmsSelect", AmsSelect);
 app.component("AmsTable", AmsTable);
 app.component("DynamicTable", DynamicTable);
 app.component("AmsCustomers", AmsCustomers);
+app.component("AmsCharts", AmsCharts);
 
 // custom
 app.component("AmsCustomSwitch", AmsCustomSwitch);
