@@ -1,4 +1,5 @@
 <template>
+  <AmsHeader />
   <div class="grid">
     <div class="col-4">
       <BasicChart />

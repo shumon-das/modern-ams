@@ -4,9 +4,8 @@
       <img alt="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROQ7UCmfAVDlSRQuo8j1rvLEbiFDrsfWEAVh_Ki8NjEWzJMlQW2K2fzuyEW8Ag192MsE8&usqp=CAU" height="40" class="mr-2"/>
     </div>
     <div class="col-9 pb-0">
-      <AmsMenubar :model="items" class="p-menubar-end p-menuitem-active">
-      </AmsMenubar>
-        <AmsButton class="margin_top" label="Login" size="small" rounded @click="this.display = true" />
+      <AmsMenubar :model="items" class="p-menubar-end p-menuitem-active"></AmsMenubar>
+      <AmsButton class="margin_top" label="Login" size="small" rounded @click="this.display = true" />
     </div>
   </div>
 
@@ -30,12 +29,13 @@ export default defineComponent({
         icon: 'pi pi-fw pi-file',
         items: [
           {
-            label: 'New',
+            label: 'Customs',
             icon: 'pi pi-fw pi-plus',
             items: [
               {
-                label: 'Bookmark',
-                icon: 'pi pi-fw pi-bookmark'
+                label: 'Switch',
+                icon: 'pi pi-fw pi-bookmark',
+                to: '/switch'
               },
               {
                 label: 'Video',
@@ -44,15 +44,22 @@ export default defineComponent({
             ]
           },
           {
-            label: 'Delete',
-            icon: 'pi pi-fw pi-trash'
+            label: 'Charts',
+            icon: 'pi pi-fw pi-trash',
+            to: '/charts'
           },
           {
             separator: true
           },
           {
-            label: 'Export',
-            icon: 'pi pi-fw pi-external-link'
+            label: 'table',
+            icon: 'pi pi-fw pi-external-link',
+            to: '/test-table'
+          },
+          {
+            label: 'Datatables',
+            icon: 'pi pi-fw pi-external-link',
+            to: '/table'
           }
         ]
       },

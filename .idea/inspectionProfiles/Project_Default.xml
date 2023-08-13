@@ -17,7 +17,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="8">
+          <list size="21">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -26,6 +26,19 @@
             <item index="5" class="java.lang.String" itemvalue="script" />
             <item index="6" class="java.lang.String" itemvalue="amscustomswitch" />
             <item index="7" class="java.lang.String" itemvalue="chart" />
+            <item index="8" class="java.lang.String" itemvalue="basicchart" />
+            <item index="9" class="java.lang.String" itemvalue="verticalchart" />
+            <item index="10" class="java.lang.String" itemvalue="horizontalchart" />
+            <item index="11" class="java.lang.String" itemvalue="stackedbarchart" />
+            <item index="12" class="java.lang.String" itemvalue="doughnutchart" />
+            <item index="13" class="java.lang.String" itemvalue="piechart" />
+            <item index="14" class="java.lang.String" itemvalue="linestylechart" />
+            <item index="15" class="java.lang.String" itemvalue="linechart" />
+            <item index="16" class="java.lang.String" itemvalue="polarchart" />
+            <item index="17" class="java.lang.String" itemvalue="radarchart" />
+            <item index="18" class="java.lang.String" itemvalue="amsheader" />
+            <item index="19" class="java.lang.String" itemvalue="datatable" />
+            <item index="20" class="java.lang.String" itemvalue="column" />
           </list>
         </value>
       </option>

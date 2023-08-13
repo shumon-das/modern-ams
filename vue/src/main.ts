@@ -55,6 +55,7 @@ import LineChart from "@/components/micro/charts/LineChart.vue";
 import LineStyleChart from "@/components/micro/charts/LineStyleChart.vue";
 import PolarChart from "@/components/micro/charts/PolarChart.vue";
 import RadarChart from "@/components/micro/charts/RadarChart.vue";
+import TestTable from "@/views/TestTable.vue";
 
 const app = createApp(App)
 
@@ -109,5 +110,6 @@ app.component("AmsCharts", AmsCharts);
 
 // custom
 app.component("AmsCustomSwitch", AmsCustomSwitch);
+app.component("TestTable", TestTable);
 
 app.mount('#app')
