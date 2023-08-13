@@ -45,6 +45,16 @@ import DynamicTable from "@/components/micro/DynamicTable.vue";
 import AmsCustomers from "@/views/AmsCustomers.vue";
 import AmsCustomSwitch from "@/components/micro/custom/AmsCustomSwitch.vue";
 import AmsCharts from "@/components/micro/custom/AmsCharts.vue";
+import BasicChart from "@/components/micro/charts/BasicChart.vue";
+import VerticalChart from "@/components/micro/charts/VerticalChart.vue";
+import HorizontalChart from "@/components/micro/charts/HorizontalChart.vue";
+import StackedBarChart from "@/components/micro/charts/StackedBarChart.vue";
+import DoughnutChart from "@/components/micro/charts/DoughnutChart.vue";
+import PieChart from "@/components/micro/charts/PieChart.vue";
+import LineChart from "@/components/micro/charts/LineChart.vue";
+import LineStyleChart from "@/components/micro/charts/LineStyleChart.vue";
+import PolarChart from "@/components/micro/charts/PolarChart.vue";
+import RadarChart from "@/components/micro/charts/RadarChart.vue";
 
 const app = createApp(App)
 
@@ -67,6 +77,18 @@ app.component("Row", Row);
 app.component("Tag", Tag);
 app.component("MultiSelect", MultiSelect);
 app.component("Chart", Chart);
+
+// micro
+app.component("BasicChart", BasicChart);
+app.component("VerticalChart", VerticalChart);
+app.component("HorizontalChart", HorizontalChart);
+app.component("StackedBarChart", StackedBarChart);
+app.component("DoughnutChart", DoughnutChart);
+app.component("PieChart", PieChart);
+app.component("LineChart", LineChart);
+app.component("LineStyleChart", LineStyleChart);
+app.component("PolarChart", PolarChart);
+app.component("RadarChart", RadarChart);
 
 //ams
 app.component("AmsHeader", AmsHeader);
