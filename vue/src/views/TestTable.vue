@@ -4,21 +4,22 @@
     <div class="col-1"></div>
     <div class="col-10">
       <div class="card">
-        <DataTable :value="products" tableStyle="min-width: 50rem">
-          <Column
-              v-for="col of columns"
-              :key="col.field"
-              :field="col.field"
-              :header="col.header"
-          ></Column>
-        </DataTable>
+<!--        <DataTable :value="products" tableStyle="min-width: 50rem">-->
+<!--          <Column-->
+<!--              v-for="col of columns"-->
+<!--              :key="col.field"-->
+<!--              :field="col.field"-->
+<!--              :header="col.header"-->
+<!--          ></Column>-->
+<!--        </DataTable>-->
+        <AmsTable :columns="columns" :data="products" :sortField="'quantity'"/>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import {defineComponent} from "vue";
+import { defineComponent } from "vue";
 import { testTableData } from "@/data/Products";
 import { testTable } from "@/tables/columns";
 
