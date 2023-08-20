@@ -147,4 +147,62 @@ const testTableData = [
     },
 ];
 
-export { testTableData }
+const customers = [
+    {
+        id: 101,
+        name: 'Mono Ranjan',
+        country: {
+            name: 'Algeria',
+            code: 'dz'
+        },
+        company: 'Benton, John B Jr',
+        date: '2015-09-13',
+        status: 'unqualified',
+        verified: true,
+        activity: 17,
+        representative: {
+            name: 'mono das',
+            image: 'ionibowcher.png'
+        },
+        balance: 70663
+    },
+    {
+        id: 102,
+        name: 'Shumon Babu',
+        country: {
+            name: 'Bangladesh',
+            code: 'dz'
+        },
+        company: 'Benton, John B Jr',
+        date: '2015-09-13',
+        status: 'unqualified',
+        verified: true,
+        activity: 17,
+        representative: {
+            name: 'shumon das',
+            image: 'ionibowcher.png'
+        },
+        balance: 70663
+    },
+    {
+        id: 103,
+        name: 'Developer',
+        country: {
+            name: 'India',
+            code: 'dz'
+        },
+        company: 'Benton, John B Jr',
+        date: '2015-09-13',
+        status: 'unqualified',
+        verified: true,
+        activity: 17,
+        representative: {
+            name: 'dev',
+            image: 'ionibowcher.png'
+        },
+        balance: 70663
+    },
+
+];
+
+export { testTableData, customers }

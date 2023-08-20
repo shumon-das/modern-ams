@@ -21,6 +21,8 @@
             </span>
             </div>
           </template>
+          <template #empty>No records found. </template>
+          <template #loading> Loading data. Please wait. </template>
           <Column
               v-for="col of columns"
               :key="col.field"
