@@ -1,59 +1,65 @@
 <template>
-  <div class="switch-box flex justify-content-between">
-    <button class="switch h-full text-white"
-            :style="checked ? 'right: 0;' : 'left: 0'"
-    >
-      {{ checked ? this.optionB : this.optionA }}
-    </button>
-    <span class="leftRight" @click="changePosition(false)">{{ this.optionA }}</span>
-    <span class="leftRight" @click="changePosition(true)">{{ this.optionB }}</span>
-  </div>
+    <div class="button-box">
+        <div class="btn-switch" :style="this.val ? 'left: 50%' : 'left: 0%'"></div>
+        <button type="button" class="toggle-btn" :class="this.val ? 'text-black' : 'text-white'" @click="updateValue(false)">
+            {{ leftOption }}</button>
+        <button type="button" class="toggle-btn" :class="this.val ? 'text-white' : 'text-black'" @click="updateValue(true)">
+            {{ rightOption }}</button>
+    </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "AmsCustomSwitch",
-  emits: ["update"],
-  props: {
-    value: { type: Boolean, required: true },
-    optionA: { type: String, default: 'Left' },
-    optionB: { type: String, default: 'Right' },
-  },
-  data () {
-    return {
-      checked: this.value,
-    };
-  },
-  methods: {
-    changePosition(val: boolean) {
-      this.checked = val;
-      this.$emit("update", val);
-    }
-  },
+    name: "AmsCustomSwitch",
+    emits: ["update"],
+    props: {
+        leftOption: { type: String, default: "Left" },
+        rightOption: { type: String, default: "Right" },
+        value: { type: Boolean, default: false },
+    },
+    data() {
+        return {
+            val: false,
+        };
+    },
+    methods: {
+        updateValue(value: boolean) {
+            this.val = value;
+            this.$emit("update", this.val);
+        },
+    },
 });
 </script>
 
 <style scoped>
-.switch-box {
-  width: 200px;
-  position: relative;
-  border-radius: 30px;
-  background: white;
-  border: 1px solid lightgrey;
+.button-box {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    border-radius: 30px;
+    background: #fff;
+    border: 1px solid lightgray;
 }
-.switch {
-  position: absolute;
-  width: 100px;
-  border-radius: 30px;
-  background: #0d89ec;
-  border: none;
-  transition:all 1s linear;
+
+.toggle-btn {
+    width: 50%;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    text-align: center;
+    padding: 5px 0px;
 }
-.leftRight {
-  padding: 5px 20%;
-  text-align: center;
-  cursor: pointer;
+
+.btn-switch {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #0d89ec;
+    border-radius: 30px;
+    transition: .5s;
 }
 </style>
