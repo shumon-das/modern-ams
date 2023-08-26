@@ -1,6 +1,11 @@
 <template>
 <div class="grid flex justify-content-center mt-7">
-  <AmsCustomSwitch :value="true" :optionA="'and'" :optionB="'or'" @update="getUpdate($event)"/>
+  <AmsCustomSwitch
+      :value="val"
+      :leftOption="'and'"
+      :rightOption="'or'"
+      @update="getUpdate($event)"
+  />
 </div>
 </template>
 
@@ -11,7 +16,18 @@ import AmsCustomSwitch from "@/components/micro/custom/AmsCustomSwitch.vue";
 export default defineComponent({
   name: "AmsCustomers",
   components: { AmsCustomSwitch },
+  data() {
+    return {
+      val: false,
+    };
+  },
+  beforeMount() {
+    this.updateVal();
+  },
   methods: {
+    updateVal() {
+      this.val = true;
+    },
     getUpdate(evt: boolean) {
       console.log(evt);
     }

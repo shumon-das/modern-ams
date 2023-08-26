@@ -21,7 +21,7 @@ export default defineComponent({
     },
     data() {
         return {
-            val: false,
+            val: this.value ? this.value : false,
         };
     },
     methods: {
